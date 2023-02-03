@@ -4,7 +4,7 @@
 #
 Name     : pypi-pypowerflex
 Version  : 1.6.0
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/a2/65/0f35cc87811ffb48b785c17c0ff3f4de9c7fb8c733ff14b0f0e2492d2deb/PyPowerFlex-1.6.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/a2/65/0f35cc87811ffb48b785c17c0ff3f4de9c7fb8c733ff14b0f0e2492d2deb/PyPowerFlex-1.6.0.tar.gz
 Summary  : Python library for Dell PowerFlex
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1675391747
+export SOURCE_DATE_EPOCH=1675455636
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -76,6 +76,7 @@ export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -
 export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
+pypi-dep-fix.py . packaging
 python3 setup.py build
 
 pushd ../buildavx2/
@@ -84,6 +85,7 @@ export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
+pypi-dep-fix.py . packaging
 python3 setup.py build
 
 popd
@@ -93,6 +95,7 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-pypowerflex
 cp %{_builddir}/PyPowerFlex-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-pypowerflex/06a39f7f35acfc238a4051640bc043101312da57 || :
 python3 -tt setup.py build  install --root=%{buildroot}
+pypi-dep-fix.py %{buildroot} packaging
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
