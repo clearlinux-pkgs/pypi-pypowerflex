@@ -5,7 +5,7 @@
 #
 Name     : pypi-pypowerflex
 Version  : 1.8.0
-Release  : 4
+Release  : 5
 URL      : https://files.pythonhosted.org/packages/81/34/9343de47044737abf89e04a0b323854263fa6163fec08866cf87cf10c7aa/PyPowerFlex-1.8.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/81/34/9343de47044737abf89e04a0b323854263fa6163fec08866cf87cf10c7aa/PyPowerFlex-1.8.0.tar.gz
 Summary  : Python library for Dell PowerFlex
