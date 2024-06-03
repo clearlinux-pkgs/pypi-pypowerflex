@@ -1,5 +1,5 @@
 PKG_NAME := pypi-pypowerflex
-URL = https://files.pythonhosted.org/packages/e8/fb/bbd2a4b9a3c92abb4f24b4385e2f2730e5dd6d5535accd031b2f1ce831cc/PyPowerFlex-1.11.0.tar.gz
+URL = https://files.pythonhosted.org/packages/60/fc/b0d3d65eb78aefb869e8659d7aa4911728519d1109521efcd05f94bc1d7a/PyPowerFlex-1.12.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
