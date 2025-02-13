@@ -7,7 +7,7 @@
 #
 Name     : pypi-pypowerflex
 Version  : 1.14.0
-Release  : 12
+Release  : 13
 URL      : https://files.pythonhosted.org/packages/8a/ae/1fe9cd57217a6dbba82396106d1dec36cd7dbb2dadea20053fec3f39f4ab/pypowerflex-1.14.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8a/ae/1fe9cd57217a6dbba82396106d1dec36cd7dbb2dadea20053fec3f39f4ab/pypowerflex-1.14.0.tar.gz
 Summary  : Python library for Dell PowerFlex
